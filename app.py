@@ -6,7 +6,11 @@ app = Flask(__name__)
 def index():
     return render_template("index.html")
 
-@app.route("/greet")
+@app.route("/Explained", methods=["POST"])
 def greet():
-    name = request.args.get("name")
-    return render_template("greet.html", name=name)
+    if not request.form.get("name") or request.form.get("Names") not in ["priya", "kamaraj", "tiny", "populu"]:
+        return render_template("failure.html")
+
+    return render_template("success.html")
+
+    

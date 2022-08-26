@@ -1,0 +1,6 @@
+@app.route("/") - to connect with the html pages
+
+
+#to not see the contents in url you need post
+request.args - get
+request.form - post
